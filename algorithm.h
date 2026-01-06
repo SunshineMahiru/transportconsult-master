@@ -4,6 +4,7 @@
 #include "graph.h"
 #include <vector>
 
+
 // 路径查询结果
 struct QueryResult {
     bool success;
@@ -19,7 +20,7 @@ private:
     const TransportGraph& graph;
     const int MIN_TRANSFER_TIME = 30; // 最小中转时间（分钟）
     
-public:
+公共:
     PathFinder(const TransportGraph& g) : graph(g) {}
     QueryResult findCheapest(const std::string& from, const std::string& to);// 最省钱路径
     QueryResult findFastest(const std::string& from, const std::string& to); // 最快到达路径
@@ -31,4 +32,5 @@ private:
                                           int arrivalTime, 
                                           const std::string& toCity) const;
 };
+
 #endif
