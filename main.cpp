@@ -1,9 +1,9 @@
+//主程序，后期可选gui交互功能，先做控制台
 #include "graph.h"
 #include "algorithm.h"
 #include <iostream>
 #include <cstdlib>
 #include <windows.h>
-
 using namespace std;
 
 void printMenu() {
@@ -228,4 +228,5 @@ int main() {
     } while (choice != 0);
     
     return 0;
+
 }
