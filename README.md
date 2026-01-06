@@ -90,8 +90,8 @@ national-transport-system/
 ### 编译运行
 ```bash
 # 克隆项目
-git clone https://github.com/yourusername/national-transport-system.git
-cd national-transport-system
+git clone https://github.com/SunshineMahiru/transportconsult-master.git
+cd transportconsult-master
 
 # 编译项目
 g++ -std=c++17 -o transport_system src/*.cpp -I src/
@@ -105,6 +105,10 @@ g++ -std=c++17 -o transport_system src/*.cpp -I src/
 # 使用MinGW或Visual Studio编译
 g++ -std=c++17 -o transport_system.exe src/*.cpp -I src/
 transport_system.exe
+```
+### 懒人模式
+```bash
+双击run2.0.bat
 ```
 
 ## 📊 数据格式
