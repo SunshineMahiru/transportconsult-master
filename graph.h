@@ -1,6 +1,7 @@
 #ifndef GRAPH_H
 #define GRAPH_H
 
+
 #include <string>
 #include <vector>
 #include <unordered_map>
@@ -30,7 +31,7 @@ class TransportGraph {
 private:
     std::unordered_map<std::string, CityNode> cities;
     
-public:
+公共:
     // 城市管理
     bool addCity(const std::string& name);
     bool removeCity(const std::string& name);
@@ -51,5 +52,6 @@ public:
     // 工具函数
     void printGraph() const;
 };
+
 
 #endif
