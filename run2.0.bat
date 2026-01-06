@@ -1,9 +1,9 @@
 @echo off
-title ½»Í¨×ÉÑ¯ÏµÍ³±àÒëÔËÐÐ¹¤¾ß
+title äº¤é€šå’¨è¯¢ç³»ç»Ÿç¼–è¯‘ç³»ç»Ÿ
 color 0A
 
 echo =================================
-echo     ½»Í¨×ÉÑ¯ÏµÍ³±àÒëÔËÐÐ¹¤¾ß
+echo     äº¤é€šå’¨è¯¢ç³»ç»Ÿç¼–è¯‘è¿è¡Œå·¥å…·
 echo =================================
 echo.
 
@@ -15,16 +15,16 @@ if exist "transport_system.exe" (
 )
 
 :EXE_EXISTS
-echo ¼ì²âµ½ÒÑ´æÔÚµÄ¿ÉÖ´ÐÐÎÄ¼þ: transport_system.exe
+echo æ£€æµ‹åˆ°å·²å­˜åœ¨çš„å¯æ‰§è¡Œæ–‡ä»¶: transport_system.exe
 echo.
-echo ÇëÑ¡Ôñ²Ù×÷:
-echo   [1] Ö±½ÓÔËÐÐÏÖÓÐ³ÌÐò
-echo   [2] É¾³ýÏÖÓÐÎÄ¼þ²¢ÖØÐÂ±àÒë
-echo   [3] ÖØÐÂ±àÒë(¸²¸ÇÏÖÓÐÎÄ¼þ)
-echo   [4] Ö»±àÒë²»ÔËÐÐ
-echo   [5] ÍË³ö
+echo è¯·é€‰æ‹©æ“ä½œ:
+echo   [1] ç›´æŽ¥è¿è¡ŒçŽ°æœ‰ç¨‹åº
+echo   [2] åˆ é™¤çŽ°æœ‰æ–‡ä»¶å¹¶é‡æ–°ç¼–è¯‘
+echo   [3] é‡æ–°ç¼–è¯‘(è¦†ç›–çŽ°æœ‰æ–‡ä»¶)
+echo   [4] åªç¼–è¯‘ä¸è¿è¡Œ
+echo   [5] é€€å‡º
 echo.
-set /p choice=ÇëÊäÈëÑ¡Ôñ(1-5): 
+set /p choice=è¯·è¾“å…¥é€‰æ‹©(1-5): 
 
 if "%choice%"=="1" goto RUN_EXISTING
 if "%choice%"=="2" goto DELETE_AND_COMPILE
@@ -32,56 +32,56 @@ if "%choice%"=="3" goto COMPILE_OVERWRITE
 if "%choice%"=="4" goto COMPILE_ONLY
 if "%choice%"=="5" goto EXIT
 
-echo ÎÞÐ§Ñ¡Ôñ£¬ÇëÖØÐÂÊäÈë
+echo æ— æ•ˆé€‰æ‹©ï¼Œè¯·é‡æ–°è¾“å…¥
 echo.
 goto EXE_EXISTS
 
 :EXE_NOT_EXISTS
-echo Î´ÕÒµ½ÒÑ±àÒëµÄ¿ÉÖ´ÐÐÎÄ¼þ
+echo æœªæ‰¾åˆ°å·²ç¼–è¯‘çš„å¯æ‰§è¡Œæ–‡ä»¶
 echo.
-echo ÇëÑ¡Ôñ²Ù×÷:
-echo   [1] ±àÒë²¢ÔËÐÐ
-echo   [2] Ö»±àÒë²»ÔËÐÐ
-echo   [3] ÍË³ö
+echo è¯·é€‰æ‹©æ“ä½œ:
+echo   [1] ç¼–è¯‘å¹¶è¿è¡Œ
+echo   [2] åªç¼–è¯‘ä¸è¿è¡Œ
+echo   [3] é€€å‡º
 echo.
-set /p choice=ÇëÊäÈëÑ¡Ôñ(1-3): 
+set /p choice=è¯·è¾“å…¥é€‰æ‹©(1-3): 
 
 if "%choice%"=="1" goto COMPILE_AND_RUN
 if "%choice%"=="2" goto COMPILE_ONLY
 if "%choice%"=="3" goto EXIT
 
-echo ÎÞÐ§Ñ¡Ôñ£¬ÇëÖØÐÂÊäÈë
+echo æ— æ•ˆé€‰æ‹©ï¼Œè¯·é‡æ–°è¾“å…¥
 echo.
 goto EXE_NOT_EXISTS
 
 :DELETE_AND_COMPILE
 echo.
-echo ÕýÔÚÉ¾³ýÏÖÓÐÎÄ¼þ...
+echo æ­£åœ¨åˆ é™¤çŽ°æœ‰æ–‡ä»¶...
 del transport_system.exe
 if exist "transport_system.exe" (
-    echo ÎÞ·¨É¾³ýÎÄ¼þ£¬ÇëÊÖ¶¯¼ì²é
+    echo æ— æ³•åˆ é™¤æ–‡ä»¶ï¼Œè¯·æ‰‹åŠ¨æ£€æŸ¥
     pause
     goto EXIT
 )
-echo É¾³ý³É¹¦£¡
+echo åˆ é™¤æˆåŠŸï¼
 goto COMPILE_AND_RUN
 
 :COMPILE_OVERWRITE
 echo.
-echo ½«¸²¸ÇÏÖÓÐÎÄ¼þ½øÐÐ±àÒë...
+echo å°†è¦†ç›–çŽ°æœ‰æ–‡ä»¶è¿›è¡Œç¼–è¯‘...
 set RUN_AFTER_COMPILE=1
 goto COMPILE
 
 :COMPILE_ONLY
 echo.
-echo ¿ªÊ¼±àÒë(²»ÔËÐÐ)...
+echo å¼€å§‹ç¼–è¯‘(ä¸è¿è¡Œ)...
 set RUN_AFTER_COMPILE=0
 goto COMPILE
 
 :RUN_EXISTING
 echo.
 echo =================================
-echo     ÔËÐÐÏÖÓÐ³ÌÐò
+echo     è¿è¡ŒçŽ°æœ‰ç¨‹åº
 echo =================================
 echo.
 transport_system.exe
@@ -96,29 +96,29 @@ goto COMPILE
 
 :COMPILE
 echo =================================
-echo     ±àÒë½»Í¨×ÉÑ¯ÏµÍ³
+echo     ç¼–è¯‘äº¤é€šå’¨è¯¢ç³»ç»Ÿ
 echo =================================
 echo.
 
-REM ¼ì²éÔ´ÎÄ¼þÊÇ·ñ´æÔÚ
-echo ¼ì²éÔ´ÎÄ¼þ...
+REM æ£€æŸ¥æºæ–‡ä»¶æ˜¯å¦å­˜åœ¨
+echo æ£€æŸ¥æºæ–‡ä»¶...
 set MISSING_FILES=0
 if not exist "graph.cpp" (
-    echo [´íÎó] ÕÒ²»µ½ graph.cpp
+    echo [é”™è¯¯] æ‰¾ä¸åˆ° graph.cpp
     set MISSING_FILES=1
 )
 if not exist "algorithm.cpp" (
-    echo [´íÎó] ÕÒ²»µ½ algorithm.cpp
+    echo [é”™è¯¯] æ‰¾ä¸åˆ° algorithm.cpp
     set MISSING_FILES=1
 )
 if not exist "main.cpp" (
-    echo [´íÎó] ÕÒ²»µ½ main.cpp
+    echo [é”™è¯¯] æ‰¾ä¸åˆ° main.cpp
     set MISSING_FILES=1
 )
 
 if %MISSING_FILES%==1 (
     echo.
-    echo ÇëÈ·±£ÒÔÏÂÎÄ¼þÔÚµ±Ç°Ä¿Â¼:
+    echo è¯·ç¡®ä¿ä»¥ä¸‹æ–‡ä»¶åœ¨å½“å‰ç›®å½•:
     echo   - graph.cpp
     echo   - algorithm.cpp
     echo   - main.cpp
@@ -127,48 +127,49 @@ if %MISSING_FILES%==1 (
     goto EXIT
 )
 
-echo [OK] ËùÓÐÔ´ÎÄ¼þ¶¼´æÔÚ
+echo [OK] æ‰€æœ‰æºæ–‡ä»¶éƒ½å­˜åœ¨
 echo.
 
-REM ÉèÖÃ±àÒëÆ÷Â·¾¶
+REM è®¾ç½®ç¼–è¯‘å™¨è·¯å¾„
 set COMPILER=g++
 
-echo ±àÒë²ÎÊý: %COMPILER% -std=c++17 graph.cpp algorithm.cpp main.cpp -o transport_system.exe
+echo ç¼–è¯‘å‚æ•°: %COMPILER% -std=c++17 graph.cpp algorithm.cpp main.cpp -o transport_system.exe
 echo.
 
-REM ±àÒëÃüÁî
-echo ¿ªÊ¼±àÒë...
+REM ç¼–è¯‘å‘½ä»¤
+echo å¼€å§‹ç¼–è¯‘...
 %COMPILER% -std=c++17 graph.cpp algorithm.cpp main.cpp -o transport_system.exe
 
-REM ¼ì²é±àÒëÊÇ·ñ³É¹¦
+REM æ£€æŸ¥ç¼–è¯‘æ˜¯å¦æˆåŠŸ
 if %errorlevel% equ 0 (
-    echo [³É¹¦] ±àÒë³É¹¦£¡
+    echo [æˆåŠŸ] ç¼–è¯‘æˆåŠŸï¼
     
     if "%RUN_AFTER_COMPILE%"=="1" (
         echo.
         echo =================================
-        echo     ÔËÐÐ½»Í¨×ÉÑ¯ÏµÍ³
+        echo     è¿è¡Œäº¤é€šå’¨è¯¢ç³»ç»Ÿ
         echo =================================
         echo.
         transport_system.exe
     ) else (
-        echo [Íê³É] ±àÒëÍê³É£¬¿ÉÖ´ÐÐÎÄ¼þÒÑÉú³É
+        echo [å®Œæˆ] ç¼–è¯‘å®Œæˆï¼Œå¯æ‰§è¡Œæ–‡ä»¶å·²ç”Ÿæˆ
     )
 ) else (
-    echo [Ê§°Ü] ±àÒëÊ§°Ü£¡
-    echo ´íÎó´úÂë: %errorlevel%
-    echo Çë¼ì²éÔ´´úÂëÖÐµÄ´íÎó
+    echo [å¤±è´¥] ç¼–è¯‘å¤±è´¥ï¼
+    echo é”™è¯¯ä»£ç : %errorlevel%
+    echo è¯·æ£€æŸ¥æºä»£ç ä¸­çš„é”™è¯¯
 )
 
 echo.
 if "%RUN_AFTER_COMPILE%"=="1" (
-    echo ³ÌÐòÖ´ÐÐÍê±Ï
+    echo ç¨‹åºæ‰§è¡Œå®Œæ¯•
 ) else (
-    echo ²Ù×÷Íê³É
+    echo æ“ä½œå®Œæˆ
 )
 
 :EXIT
 echo.
-echo °´ÈÎÒâ¼üÍË³ö...
+echo æŒ‰ä»»æ„é”®é€€å‡º...
 pause > nul
+
 exit /b %errorlevel%
