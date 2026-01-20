@@ -261,5 +261,5 @@ flight CZ3101 广州 深圳 13 0 14 0 680.0
 ---
 
 <div align="center">
-  <p>智能交通，规划未来 · 用代码连接每一座城市 助力数据结构高分~</p>
+  <p>Maintained by [SunshineMahiru](https://github.com/SunshineMahiru). Contained AI help with this program.</p>
 </div>
